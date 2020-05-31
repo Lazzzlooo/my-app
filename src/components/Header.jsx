@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <header className="header">
+        <header className="header container">
             <ul className="header__list">
                 <li className="header__item">
                     <a className="header__logo logo" href="#">Chat</a>

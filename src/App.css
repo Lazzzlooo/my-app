@@ -5,14 +5,29 @@ body {
   width: 900px;
   margin: 0 auto;
 }
+
+.container{
+  background-color: #fff;
+}
+
 .header {
   height: 60px;
-  background-color: #fff;
 }
 
 .header__list {
   display: flex;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidemenu {
+  width: 280px;
+  margin-top: 24px;
+}
+
+.sidemenu__list {
   margin: 0;
   padding: 0;
   list-style: none;
