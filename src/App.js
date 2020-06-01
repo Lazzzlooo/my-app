@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Sidemenu from "./components/Sidemenu";
 import Profile from "./components/Profile";
 import Post from "./components/Post";
+import Calendar from "./components/Calendar";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Profile />
       </div>
        <div className="box">
+           <Calendar />
            <Post />
 
        </div>
