@@ -3,6 +3,7 @@ import './App.css';
 import Header from "./components/Header";
 import Sidemenu from "./components/Sidemenu";
 import Profile from "./components/Profile";
+import Post from "./components/Post";
 
 function App() {
   return (
@@ -12,6 +13,10 @@ function App() {
           <Sidemenu />
           <Profile />
       </div>
+       <div className="box">
+           <Post />
+
+       </div>
     </div>
   );
 }
