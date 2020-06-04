@@ -10,22 +10,6 @@ body {
   justify-content: space-between;
 }
 
-.container{
-  background-color: #fff;
-}
-
-.profile {
-  width: 590px;
-}
-
-.profile__list {
-  display: flex;
-
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .calendar-box {
   width: 280px;
   height: 302px;

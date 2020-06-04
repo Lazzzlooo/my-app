@@ -1,0 +1,46 @@
+.profile {
+    width: 590px;
+    background-color: #fff;
+}
+
+.list {
+    display: flex;
+
+    margin: 0;
+    padding: 20px 0 0 20px;
+    list-style: none;
+}
+
+.avatar img{
+    width: 200px;
+    height: 200px;
+}
+
+.social_list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.about {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.about_key p {
+    margin: 0;
+    padding: 0;
+}
+
+.about_value a{
+    display: block;
+}
+
+.photo_list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
