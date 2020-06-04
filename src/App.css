@@ -12,17 +12,7 @@ body {
   background-color: #fff;
 }
 
-.header {
-  height: 60px;
-}
 
-.header__list {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0 50px 0 50px;
-  list-style: none;
-}
 
 .sidemenu {
   width: 280px;

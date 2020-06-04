@@ -23,7 +23,7 @@ const Post = () => {
                     <label htmlFor="">People</label>
                 </li>
                 <li className="post__action-item">
-                    <input type="radio" placeholder="" checked/>
+                    <input type="radio" placeholder=""/>
                     <label htmlFor="">Check in</label>
                 </li>
                 <li className="post__action-item">
