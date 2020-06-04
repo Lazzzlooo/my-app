@@ -1,29 +1,30 @@
 import React from 'react';
+import s from './Sidemenu.module.css';
 
 const Sidemenu = () => {
     return (
-        <aside className="sidemenu container">
-            <ul className="sidemenu__list">
-                <li className="sidemenu__item">
-                    <a href="#" className="sidemenu__link">Profile</a>
+        <aside className={s.sidemenu}>
+            <ul className={s.list}>
+                <li className={s.item}>
+                    <a href="#" className={s.link}>Profile</a>
                 </li>
-                <li className="sidemenu__item">
-                    <a href="#" className="sidemenu__link">Friends</a>
+                <li className={s.item}>
+                    <a href="#" className={s.link}>Friends</a>
                 </li>
-                <li className="sidemenu__item">
-                    <a href="#" className="sidemenu__link">Chats</a>
+                <li className={s.item}>
+                    <a href="#" className={s.link}>Chats</a>
                 </li>
-                <li className="sidemenu__item">
-                    <a href="#" className="sidemenu__link">Music</a>
+                <li className={s.item}>
+                    <a href="#" className={s.link}>Music</a>
                 </li>
-                <li className="sidemenu__item">
-                    <a href="#" className="sidemenu__link">News</a>
+                <li className={s.item}>
+                    <a href="#" className={s.link}>News</a>
                 </li>
-                <li className="sidemenu__item">
-                    <a href="#" className="sidemenu__link">Games</a>
+                <li className={s.item}>
+                    <a href="#" className={s.link}>Games</a>
                 </li>
-                <li className="sidemenu__item">
-                    <a href="#" className="sidemenu__link">Setting</a>
+                <li className={s.item}>
+                    <a href="#" className={s.link}>Setting</a>
                 </li>
             </ul>
 

@@ -1,5 +1,7 @@
 body {
   background-color: #f5f7fa;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 .box {
   width: 900px;
@@ -10,18 +12,6 @@ body {
 
 .container{
   background-color: #fff;
-}
-
-
-
-.sidemenu {
-  width: 280px;
-}
-
-.sidemenu__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 .profile {
