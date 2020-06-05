@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Header from "./components/Header";
-import Sidemenu from "./components/Sidemenu";
-import Profile from "./components/Profile";
-import Post from "./components/Post";
-import Calendar from "./components/Calendar";
+import Header from "./components/Header/Header";
+import Sidemenu from "./components/Sidemenu/Sidemenu";
+import Profile from "./components/Profile/Profile";
+import Posts from "./components/Posts/Posts";
+import Calendar from "./components/Calendar/Calendar";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       </div>
        <div className="box">
            <Calendar />
-           <Post />
+           <Posts />
 
        </div>
     </div>
