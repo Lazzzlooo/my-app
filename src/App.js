@@ -3,8 +3,8 @@ import './App.css';
 import Header from "./components/Header/Header";
 import Sidemenu from "./components/Sidemenu/Sidemenu";
 import Profile from "./components/Profile/Profile";
-import Posts from "./components/Posts/Posts";
 import Calendar from "./components/Calendar/Calendar";
+import Posts from "./components/Posts/Posts";
 
 function App() {
   return (
@@ -17,7 +17,6 @@ function App() {
        <div className="box">
            <Calendar />
            <Posts />
-
        </div>
     </div>
   );
