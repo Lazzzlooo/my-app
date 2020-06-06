@@ -4,13 +4,28 @@ body {
   font-size: 16px;
 }
 .box {
-  width: 900px;
-  margin: 24px auto 0;
   display: flex;
   justify-content: space-between;
+  width: 900px;
+
+  padding: 0;
+  margin: 24px auto 0;
+
+  list-style: none;
 }
 
-.calendar-box {
-  width: 280px;
-  height: 302px;
+.box__item {
+  background-color: #fff;
+}
+
+.box__item--posts {
+  background-color: transparent;
+}
+
+.box__item:first-child {
+  width: 31%;
+}
+
+.box__item:last-child {
+  width: 66%;
 }

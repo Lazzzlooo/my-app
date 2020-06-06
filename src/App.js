@@ -9,15 +9,15 @@ import Posts from "./components/Posts/Posts";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <div className="box">
-          <Sidemenu />
-          <Profile />
-      </div>
-       <div className="box">
-           <Calendar />
-           <Posts />
-       </div>
+      <Header/>
+      <ul className="box">
+        <li className="box__item"><Sidemenu/></li>
+        <li className="box__item"><Profile/></li>
+      </ul>
+      <ul className="box">
+        <li className="box__item"><Calendar/></li>
+        <li className="box__item box__item--posts"><Posts/></li>
+      </ul>
     </div>
   );
 }
