@@ -3,7 +3,7 @@ import s from './Profile.module.css';
 
 const Profile = () => {
     return (
-        <section className={s.profile}>
+        <div className={s.profile}>
             <ul className={s.list}>
                 <li className={s.item}>
                     <p className={s.avatar}>
@@ -64,7 +64,7 @@ const Profile = () => {
                     </div>
                 </li>
             </ul>
-        </section>
+        </div>
     );
 }
 
