@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.list {
+    display: flex;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+}
+.list li {
+    height: 40px;
+}
+
+.list li:first-child {
+    margin-right: 10px;
+}
+
+.avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.text_box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.text p {
+    margin: 0;
+    padding: 0;
+}
+
+.user_name {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.isOnline {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.message {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 12px;
+}
+
+
+
+
+

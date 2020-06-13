@@ -1,0 +1,27 @@
+.list {
+    width: 220px;
+    height: 420px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    border-right: 1px solid rgba(57, 57, 57, 0.4);
+}
+
+.link {
+    display: block;
+    width: 220px;
+}
+
+.link:hover {
+    background-color: #b1e8d4;
+}
+
+.active {
+    background-color: #47dc95;
+}
+
+.active:hover  {
+    background-color: #47dc95;
+}
