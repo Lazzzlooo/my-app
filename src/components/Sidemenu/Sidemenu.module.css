@@ -1,12 +1,13 @@
 .list {
     margin: 0;
-    padding: 15px 0px 15px 0px;
+    padding: 0;
     list-style: none;
 }
 
 .item {
     width: 100%;
     position: relative;
+    /*margin-bottom: 10px;*/
 
 }
 
@@ -16,11 +17,32 @@
 
 .link {
     display: block;
-    padding: 10px 35px 10px 25px;
+    padding: 15px 35px 15px 25px;
     line-height: 30px;
 }
 
+.link:hover {
+    background-color: #b1e8d4;
+}
+
+.item:first-child .link:hover,
+.item:first-child .active{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.item:last-child .link:hover,
+.item:last-child .active {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
 .active {
+    background-color: #47dc95;
+    color: #fff;
+}
+
+.active:hover  {
     background-color: #47dc95;
 }
 
