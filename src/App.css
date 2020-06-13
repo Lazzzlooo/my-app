@@ -25,14 +25,17 @@ a {
 
 
 .box__item {
-  width: 70.6%;
+  width: 720px;
   margin-bottom: 20px;
 
   background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 2px 6px rgba(47, 83, 151, 0.1);
+
 }
 
 .box__item:first-child {
-  width: 27.5%;
+  width: 280px;
   height: 100%;
 }
 
