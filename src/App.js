@@ -4,7 +4,6 @@ import './App.css';
 import Header from "./components/Header/Header";
 import Sidemenu from "./components/Sidemenu/Sidemenu";
 import Profile from "./components/Profile/Profile";
-import Posts from "./components/Posts/Posts";
 import Chats from "./components/Chats/Chats";
 
 function App(props) {
@@ -18,7 +17,7 @@ function App(props) {
         <ul className="box">
           <li className="box__item"><Sidemenu/></li>
           <li className="box__item">
-            <Route path='/chats' render={ () =>  <Chats dialogs={props.dialogs} messages={props.messages}/>}/>
+            <Route path='/chats' render={ () =>  <Chats state={props.state.dialogsPage}/>}/>
             <Route path='/profile' render={ () => <Profile/>}/>
           </li>
         </ul>
