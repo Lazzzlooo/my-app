@@ -1,33 +1,22 @@
 import React from 'react';
 import s from './Chats.module.css';
-import {NavLink} from 'react-router-dom';
 import Chat from "./Chat/Chat";
 import SearchForm from "./SearchForm/SearchForm";
+import Message from "./message/Message";
 
-const Chats = () => {
+const Chats = (props) => {
+
+  let dialogElements = props.dialogs.map( dialog => <li className={s.item}><Chat id={dialog.id} name={dialog.name} message={dialog.message}/></li>)
+  let messageElements = props.messages.map( message => <li className={s.message_item}><Message message={message.message} id={message.id}/></li>)
+
   return (
     <div className={s.chats}>
-
       <ul className={s.list}>
         <li className={s.item}><SearchForm /></li>
-        <li className={s.item}>
-          <NavLink to='/chats/1' activeClassName={s.active} className={s.link}><Chat /></NavLink>
-        </li>
-        <li className={s.item}>
-          <NavLink to='/chats/2' activeClassName={s.active} className={s.link}><Chat /></NavLink>
-        </li>
-        <li className={s.item}>
-          <NavLink to='/chats/3' activeClassName={s.active} className={s.link}><Chat /></NavLink>
-        </li>
-        <li className={s.item}>
-          <NavLink to='/chats/4' activeClassName={s.active} className={s.link}><Chat /></NavLink>
-        </li>
-        <li className={s.item}>
-          <NavLink to='/chats/5' activeClassName={s.active} className={s.link}><Chat /></NavLink>
-        </li>
-        <li className={s.item}>
-          <NavLink to='/chats/6' activeClassName={s.active} className={s.link}><Chat /></NavLink>
-        </li>
+        {dialogElements}
+      </ul>
+      <ul className={s.message_list}>
+        {messageElements}
       </ul>
     </div>
   )

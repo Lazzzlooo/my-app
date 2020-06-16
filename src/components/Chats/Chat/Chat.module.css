@@ -26,6 +26,7 @@
 .text_box {
     display: flex;
     justify-content: space-between;
+    width: 150px;
     margin-bottom: 6px;
 }
 
@@ -41,6 +42,7 @@
 }
 
 .isOnline {
+    text-align: right;
     font-size: 10px;
     font-weight: 500;
     line-height: 22px;
@@ -50,6 +52,24 @@
     font-size: 12px;
     font-weight: 300;
     line-height: 12px;
+}
+
+
+.link {
+    display: block;
+    width: 220px;
+}
+
+.link:hover {
+    background-color: #b1e8d4;
+}
+
+.active {
+    background-color: #47dc95;
+}
+
+.active:hover  {
+    background-color: #47dc95;
 }
 
 
