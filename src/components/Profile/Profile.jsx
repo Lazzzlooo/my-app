@@ -3,15 +3,17 @@ import s from './Profile.module.css';
 import ProfileCard from "./ProfileCard/ProfileCard";
 import ProfileDescription from "./ProfileDescription/ProfileDescription";
 
-const Profile = () => {
+const Profile = (props) => {
+
   return (
     <div className={s.profile}>
       <ul className={s.list}>
         <li className={s.item}>
-          <ProfileCard />
+          <ProfileCard firstName={props.state.firstName} lastName={props.state.lastName} job={props.state.job}/>
         </li>
         <li className={s.item}>
-          <ProfileDescription />
+          <ProfileDescription birthday={props.state.birthday} currentCity={props.state.currentCity}
+                              website={props.state.website} isOnline={props.state.isOnline}/>
         </li>
       </ul>
     </div>

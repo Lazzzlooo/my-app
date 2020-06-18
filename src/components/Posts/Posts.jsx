@@ -1,15 +1,16 @@
 import React from 'react';
 import s from './Posts.module.css'
 import Post from "./Post/Post";
-import Post_form from "./Post_form/Post_form";
+import PostForm from "./PostForm/PostForm";
 
-const Posts = () => {
+const Posts = (props) => {
+
+  let postElements = props.state.map(post => <Post id={post.id} postText={post.postText}/>)
     return (
         <section className={s.posts}>
-            <Post_form />
+            <PostForm addPost={props.addPost}/>
+            { postElements }
 
-            <Post message={"My first post"}/>
-            <Post message={"My second post"}/>
         </section>
     );
 }

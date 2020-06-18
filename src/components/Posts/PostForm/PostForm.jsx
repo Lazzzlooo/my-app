@@ -1,7 +1,16 @@
 import React from 'react';
-import s from './Post_form.module.css';
+import s from './PostForm.module.css';
 
-const Post_form = () => {
+const PostForm = (props) => {
+
+    let newPostElement = React.createRef();
+
+    let addPost = () => {
+        let text = newPostElement.current.value;
+        props.addPost(text);
+        newPostElement.current.value = '';
+    }
+
     return (
         <section className={s.post_form}>
             <ul className={s.buttons_list}>
@@ -16,7 +25,7 @@ const Post_form = () => {
                 </li>
             </ul>
             <form action="" className={s.form}>
-                <input type="text" placeholder="What’s on your mind?" className={s.input}/>
+                <textarea ref={newPostElement} placeholder="What’s on your mind?" className={s.input}/>
             </form>
             <ul className={s.action_list}>
                 <li className={s.action_item}>
@@ -32,11 +41,11 @@ const Post_form = () => {
                     <label htmlFor="">Mood</label>
                 </li>
                 <li className={s.action_item}>
-                    <button className={s.button_get}>Share</button>
+                    <button onClick={ addPost} className={s.button_get}>Add post</button>
                 </li>
             </ul>
         </section>
     );
 }
 
-export default Post_form;
+export default PostForm;

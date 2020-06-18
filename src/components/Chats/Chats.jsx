@@ -6,13 +6,15 @@ import Message from "./message/Message";
 
 const Chats = (props) => {
 
-  let dialogElements = props.state.dialogs.map( dialog => <li className={s.item}><Chat id={dialog.id} name={dialog.name} message={dialog.message}/></li>)
-  let messageElements = props.state.messages.map( message => <li className={s.message_item}><Message message={message.message} id={message.id}/></li>)
+  let dialogElements = props.state.dialogs.map(dialog => <li className={s.item}><Chat id={dialog.id} name={dialog.name}
+                                                                                      message={dialog.message}/></li>)
+  let messageElements = props.state.messages.map(message => <li className={s.message_item}><Message
+    message={message.message} id={message.id}/></li>)
 
   return (
     <div className={s.chats}>
       <ul className={s.list}>
-        <li className={s.item}><SearchForm /></li>
+        <li className={s.item}><SearchForm/></li>
         {dialogElements}
       </ul>
       <ul className={s.message_list}>

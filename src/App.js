@@ -5,20 +5,21 @@ import Header from "./components/Header/Header";
 import Sidemenu from "./components/Sidemenu/Sidemenu";
 import Profile from "./components/Profile/Profile";
 import Chats from "./components/Chats/Chats";
+import Posts from "./components/Posts/Posts";
+
 
 function App(props) {
-
-
 
   return (
     <BrowserRouter>
       <div className="App">
-        <Header/>
+        <Header state={props.state.user}/>
         <ul className="box">
           <li className="box__item"><Sidemenu/></li>
           <li className="box__item">
             <Route path='/chats' render={ () =>  <Chats state={props.state.dialogsPage}/>}/>
-            <Route path='/profile' render={ () => <Profile/>}/>
+            <Route path='/profile' render={ () => <Profile state={props.state.user}/>}/>
+            <Route path='/feed' render={ () =>  <Posts state={props.state.post} addPost={props.addPost}/>}/>
           </li>
         </ul>
 

@@ -4,7 +4,7 @@ import s from './Post.module.css';
 const Post = (props) => {
     return (
         <div className={s.post}>
-            <p>{props.message}</p>
+            <p>{props.postText}</p>
         </div>
         );
 }

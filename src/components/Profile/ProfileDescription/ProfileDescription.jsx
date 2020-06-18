@@ -1,11 +1,12 @@
 import React from 'react';
 import s from './ProfileDescription.module.css';
 import PhotoGallery from "./PhotoGallery/PhotoGallery";
+import {NavLink} from 'react-router-dom';
 
-const ProfileDescription = () => {
+const ProfileDescription = (props) => {
   return (
     <div className={s.info}>
-      <p className={s.isOnline}>last seen one hour ago</p>
+      <p className={s.isOnline}>{props.isOnline}</p>
       <ul className={s.about}>
         {/*Ключ _ значение ?*/}
         <li className={s.about_key}>
@@ -14,9 +15,9 @@ const ProfileDescription = () => {
           <p>Website:</p>
         </li>
         <li className={s.about_value}>
-          <a href={"#"}>February 20, 2000</a>
-          <a href={"#"}>New-York</a>
-          <a href={"#"}>www.x.com</a>
+          <NavLink to={"#"}>{props.birthday}</NavLink>
+          <NavLink to={"#"}>{props.currentCity}</NavLink>
+          <NavLink to={"#"}>{props.website}</NavLink>
         </li>
       </ul>
       <PhotoGallery />
