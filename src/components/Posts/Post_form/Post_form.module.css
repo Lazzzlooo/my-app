@@ -1,5 +1,7 @@
 .post_form {
     background-color: #fff;
+    box-shadow: 0 2px 6px rgba(47, 83, 151, 0.1);
+    border-radius: 6px;
 }
 
 .buttons_list,
