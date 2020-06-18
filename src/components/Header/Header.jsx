@@ -1,8 +1,9 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import s from './Header.module.css';
+import avatar from '../../img/Photo.png'
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header className={s.header} >
             <ul className={s.list}>
@@ -11,14 +12,17 @@ const Header = () => {
                 </li>
                 <li className={s.item}>
                     <div className={s.search}>
-                        <form action="" className="search-form">
+                        <form action="" className={s.search_form}>
                             <input type="text" placeholder={"Search"}/>
                         </form>
                     </div>
                 </li>
                 <li className={s.item}>
-                    <NavLink to="#" className={s.user}>User Name</NavLink>
-                    <img src="/src/img/Photo.png" alt="" width={40} height={40}/>
+                    <NavLink to="#" className={s.user}>
+                        {props.state.firstName} {props.state.lastName}
+                        <img className={s.avatar} src={avatar} alt="" width={40} height={40}/>
+                    </NavLink>
+
                 </li>
             </ul>
         </header>
