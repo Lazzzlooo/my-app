@@ -8,7 +8,7 @@ const Posts = (props) => {
   let postElements = props.state.map(post => <Post id={post.id} postText={post.postText}/>)
     return (
         <section className={s.posts}>
-            <PostForm addPost={props.addPost}/>
+            <PostForm addPost={props.addPost}  updateNewPostText={props.updateNewPostText}/>
             { postElements }
 
         </section>

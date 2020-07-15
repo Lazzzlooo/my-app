@@ -5,10 +5,15 @@ const PostForm = (props) => {
 
     let newPostElement = React.createRef();
 
-    let addPost = () => {
+    let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.addPost(text);
+        props.updateNewPostText(text);
+    }
+
+    let addPost = () => {
+        props.addPost();
         newPostElement.current.value = '';
+        console.log(newPostElement.current.value);
     }
 
     return (
@@ -25,7 +30,7 @@ const PostForm = (props) => {
                 </li>
             </ul>
             <form action="" className={s.form}>
-                <textarea ref={newPostElement} placeholder="What’s on your mind?" className={s.input}/>
+                <textarea value={props.newPostText} onChange={onPostChange} ref={newPostElement} className={s.input}/>
             </form>
             <ul className={s.action_list}>
                 <li className={s.action_item}>

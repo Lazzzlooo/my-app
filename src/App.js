@@ -17,9 +17,12 @@ function App(props) {
         <ul className="box">
           <li className="box__item"><Sidemenu/></li>
           <li className="box__item">
-            <Route path='/chats' render={ () =>  <Chats state={props.state.dialogsPage}/>}/>
-            <Route path='/profile' render={ () => <Profile state={props.state.user}/>}/>
-            <Route path='/feed' render={ () =>  <Posts state={props.state.post} addPost={props.addPost}/>}/>
+            <Route path='/chats' render={() => <Chats state={props.state.dialogsPage}/>}/>
+            <Route path='/profile' render={() => <Profile state={props.state.user}/>}/>
+            <Route path='/feed' render={() => <Posts
+              state={props.state.post}
+              addPost={props.addPost}
+              updateNewPostText={props.updateNewPostText}/>}/>
           </li>
         </ul>
 
