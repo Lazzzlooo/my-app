@@ -3,6 +3,7 @@ import s from './Chats.module.css';
 import Chat from "./Chat/Chat";
 import SearchForm from "./SearchForm/SearchForm";
 import Message from "./message/Message";
+import MessageForm from "./MessageForm/MessageForm";
 
 const Chats = (props) => {
 
@@ -17,9 +18,14 @@ const Chats = (props) => {
         <li className={s.item}><SearchForm/></li>
         {dialogElements}
       </ul>
-      <ul className={s.message_list}>
-        {messageElements}
-      </ul>
+      <div className={s.message_container}>
+        <ul className={s.message_list}>
+          {messageElements}
+        </ul>
+        <div className={s.message_form}>
+          <MessageForm />
+        </div>
+      </div>
     </div>
   )
 }

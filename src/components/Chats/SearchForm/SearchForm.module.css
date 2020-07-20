@@ -13,3 +13,8 @@
     font-size: 12px;
     line-height: 16px;
 }
+
+.search_form input[type=text]:focus {
+    outline: none;
+}
+

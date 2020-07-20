@@ -58,6 +58,7 @@
 .link {
     display: block;
     width: 220px;
+    transition: background-color 0.5s cubic-bezier(0, 0, 0.37, 0.81);
 }
 
 .link:hover {
@@ -66,11 +67,22 @@
 
 .active {
     background-color: #47dc95;
+    animation: linkColor 1s cubic-bezier(0, 0, 0.37, 0.81);
 }
 
 .active:hover  {
     background-color: #47dc95;
 }
+
+@keyframes linkColor {
+    0% {
+        background-color: #b1e8d4;
+    }
+    100% {
+        background-color: #47dc95;
+    }
+}
+
 
 
 
