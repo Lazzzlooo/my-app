@@ -21,8 +21,7 @@ function App(props) {
             <Route path='/profile' render={() => <Profile state={props.state.user}/>}/>
             <Route path='/feed' render={() => <Posts
               state={props.state.post}
-              addPost={props.addPost}
-              updateNewPostText={props.updateNewPostText}/>}/>
+              dispatch={props.dispatch}/>}/>
           </li>
         </ul>
 

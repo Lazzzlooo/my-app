@@ -1,5 +1,8 @@
 import React from 'react';
 import s from './PostForm.module.css';
+import {addPostActionCreater, updateNewPostTextActionCreator} from "../../../redux/state";
+
+
 
 const PostForm = (props) => {
 
@@ -7,11 +10,11 @@ const PostForm = (props) => {
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.updateNewPostText(text);
+        props.dispatch(updateNewPostTextActionCreator(text));
     }
 
     let addPost = () => {
-        props.addPost();
+        props.dispatch(addPostActionCreater());
         newPostElement.current.value = '';
         console.log(newPostElement.current.value);
     }
@@ -46,7 +49,7 @@ const PostForm = (props) => {
                     <label htmlFor="">Mood</label>
                 </li>
                 <li className={s.action_item}>
-                    <button onClick={ addPost} className={s.button_get}>Add post</button>
+                    <button onClick={ addPost } className={s.button_get}>Add post</button>
                 </li>
             </ul>
         </section>
