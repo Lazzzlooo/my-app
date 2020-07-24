@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './PostForm.module.css';
+import s from './PostForm.module.scss';
 import {addPostActionCreater, updateNewPostTextActionCreator} from "../../../redux/state";
 
 

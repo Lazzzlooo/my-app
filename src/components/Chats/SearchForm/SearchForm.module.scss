@@ -1,20 +1,22 @@
-.search_form {
-    width: 100%;
-}
+@import "src/mixins/mixins";
 
-.search_form input[type=text]{
+.search_form {
+  width: 100%;
+
+  & input[type=text] {
     width: 220px;
     padding: 12px 10px;
     border: none;
     border-right: 1px solid rgba(57, 57, 57, 0.4);
     border-bottom: 1px solid rgba(57, 57, 57, 0.4);
+    border-top-left-radius: $radius;
 
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     line-height: 16px;
-}
 
-.search_form input[type=text]:focus {
-    outline: none;
+    &:focus {
+      outline: none;
+    }
+  }
 }
-

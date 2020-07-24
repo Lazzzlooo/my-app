@@ -1,0 +1,46 @@
+.list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(47, 83, 151, 0.1);
+  border-radius: 6px;
+  list-style: none;
+}
+
+.item {
+  &:first-child {
+    padding: 25px;
+    border-right: 1px solid rgba(57, 57, 57, 0.4);
+  }
+}
+
+
+.about {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about_key {
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.about_value {
+    a {
+        display: block;
+    }
+}
+
+.photo_list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

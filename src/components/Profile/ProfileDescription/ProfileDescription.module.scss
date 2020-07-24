@@ -1,0 +1,19 @@
+.about {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.about_key {
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.about_value {
+    a {
+        display: block;
+    }
+}

@@ -1,15 +1,22 @@
+@import "src/mixins/mixins";
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   box-sizing: border-box;
   background-color: #f5f7fa;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  color: #393939;
+  color: $darkGrey;
 }
 
 a {
-  color: #393939;
+  color: $darkGrey;
   text-decoration: none;
 }
+
 .box {
   display: flex;
   flex-wrap: wrap;
@@ -27,15 +34,17 @@ a {
 .box__item {
   width: 720px;
   margin-bottom: 20px;
+
+  &:first-child {
+    width: 280px;
+    height: 100%;
+  }
 }
 
-.box__item:first-child {
-  width: 280px;
-  height: 100%;
-}
-
-.box-profile li {
-  margin-bottom: 20px;
+.box-profile {
+  li {
+    margin-bottom: 20px;
+  }
 }
 
 

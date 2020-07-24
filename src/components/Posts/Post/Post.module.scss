@@ -1,7 +1,9 @@
+@import "src/mixins/mixins";
+
 .post {
     height: 60px;
     margin-top: 24px;
     background-color: #fff;
     box-shadow: 0 2px 6px rgba(47, 83, 151, 0.1);
-    border-radius: 6px;
+    border-radius: $radius;
 }

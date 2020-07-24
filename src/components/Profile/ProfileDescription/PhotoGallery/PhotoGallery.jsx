@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './PhotoGallery.module.css';
+import s from './PhotoGallery.module.scss';
 
 const PhotoGallery = () => {
   return (
@@ -7,19 +7,19 @@ const PhotoGallery = () => {
         <p className={s.title}>My Photo</p>
         <ul className={s.list}>
           <li className={s.item}>
-            <a href="#">
+            <p>
               <img src="https://via.placeholder.com/94" alt=""/>
-            </a>
+            </p>
           </li>
           <li className={s.item}>
-            <a href="#">
+            <p>
               <img src="https://via.placeholder.com/94" alt=""/>
-            </a>
+            </p>
           </li>
           <li className={s.item}>
-            <a href="#">
+            <p>
               <img src="https://via.placeholder.com/94" alt=""/>
-            </a>
+            </p>
           </li>
         </ul>
       </div>

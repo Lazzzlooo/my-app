@@ -1,0 +1,46 @@
+@import "variables";
+
+@mixin linkColorAnimation($delay_1, $delay_2) {
+  animation: linkColor $delay_1 cubic-bezier(0, 0, 0.37, 0.81), textColor $delay_2 cubic-bezier(0, 0, 0.37, 0.81);
+}
+
+@mixin linkTransition($option, $delay) {
+  transition: $option $delay cubic-bezier(0, 0, 0.37, 0.81);
+}
+
+@mixin key($textColor_1, $textColor_2) {
+  @keyframes linkColor {
+    0% {
+      background-color: #b1e8d4;
+    }
+    100% {
+      background-color: #47dc95;
+    }
+  }
+  @keyframes textColor {
+    0% {
+      color: $textColor_1;
+    }
+
+    100% {
+      color: $textColor_2;
+    }
+  }
+}
+
+@mixin visually_hidden {
+  .visually_hidden:not(:focus):not(:active),
+  input[type="checkbox"].visually_hidden,
+  input[type="radio"].visually_hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}

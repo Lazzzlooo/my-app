@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import s from './Sidemenu.module.css';
+import s from './Sidemenu.module.scss';
 
 const Sidemenu = () => {
     return (

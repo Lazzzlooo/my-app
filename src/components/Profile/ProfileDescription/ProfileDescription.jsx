@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './ProfileDescription.module.css';
+import s from './ProfileDescription.module.scss';
 import PhotoGallery from "./PhotoGallery/PhotoGallery";
 import {NavLink} from 'react-router-dom';
 

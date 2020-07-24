@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './ProfileCard.module.css';
+import s from './ProfileCard.module.scss';
 import avatar from '../../../img/Photo.png'
 import IconFacebook from "../../Icons/IconFacebook";
 import IconTwitter from "../../Icons/IconTwitter";
@@ -19,28 +19,28 @@ const ProfileCard = (props) => {
         </div>
         <ul className={s.social_list}>
           <li className={s.social_item}>
-            <a href={"http:\\www.facebook.com"}>
+            <p>
               <IconFacebook iconFill="#E8E8EB" Fill="#393939"/>
-              <span className={s.vissually_hidden}>Facebook</span>
-            </a>
+              <span className={s.visually_hidden}>Facebook</span>
+            </p>
           </li>
           <li className={s.social_item}>
-            <a href={"http:\\www.twitter.com"}>
+            <p>
               <IconTwitter iconFill="#e8e8e8" Fill="#393939"/>
-              <span className={s.vissually_hidden}>Twitter</span>
-            </a>
+              <span className={s.visually_hidden}>Twitter</span>
+            </p>
           </li>
           <li className={s.social_item}>
-            <a href={"http:\\www.instagram.com"}>
+            <p>
               <IconInstagram iconFill="#e8e8e8" Fill="#393939"/>
-              <span className={s.vissually_hidden}>Instagram</span>
-            </a>
+              <span className={s.visually_hidden}>Instagram</span>
+            </p>
           </li>
           <li className={s.social_item}>
-            <a href={"http:\\www.linkedin.com"}>
+            <p>
               <IconLinkedin iconFill="#e8e8e8" Fill="#393939"/>
-              <span className={s.vissually_hidden}>Linkedin</span>
-            </a>
+              <span className={s.visually_hidden}>Linkedin</span>
+            </p>
           </li>
         </ul>
         <div className={s.buttons}>

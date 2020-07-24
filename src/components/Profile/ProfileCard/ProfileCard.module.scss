@@ -1,0 +1,62 @@
+@import "src/mixins/mixins";
+
+@include visually_hidden;
+
+.avatar {
+  height: 260px;
+  padding: 0;
+  margin: 0;
+
+  img {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+.box {
+  width: 260px;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.user_descr {
+  p {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+
+}
+
+.social_list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.social_item {
+  p {
+    margin: 0;
+    padding: 0;
+    &:hover {
+      cursor: pointer;
+
+      path {
+        &:first-of-type {
+          fill: $green;
+        }
+
+        &:last-of-type {
+          fill: $darkGrey;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

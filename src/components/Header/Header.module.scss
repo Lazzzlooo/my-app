@@ -1,0 +1,76 @@
+@import "src/mixins/mixins";
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(../../fonts/BebasNeue-Regular.ttf);
+}
+
+.header {
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(47, 83, 151, 0.1);
+}
+
+.list {
+  display: flex;
+
+  width: 1020px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  &:nth-child(2) {
+    padding-left: 126px;
+  }
+
+  &:last-child {
+    margin-left: auto;
+  }
+}
+
+.logo {
+  display: block;
+  width: 174px;
+  padding: 0 58px;
+
+  font-family: "Bebas Neue", serif;
+  font-size: 38px;
+  line-height: 60px;
+
+  &:hover {
+    color: #fff;
+    background-color: $green;
+  }
+}
+
+.search_form {
+  padding-top: 14px;
+
+  & input[type=text] {
+    width: 320px;
+    height: 32px;
+    padding-left: 31px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    font-size: 14px;
+    line-height: 16px;
+    color: $darkGrey;
+
+    border: 1px solid $darkGrey;
+    border-radius: 16px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+
+

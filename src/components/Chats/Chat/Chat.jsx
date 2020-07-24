@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Chat.module.css';
+import s from './Chat.module.scss';
 import avatar from '../../../img/Photo.png'
 import {NavLink} from 'react-router-dom';
 

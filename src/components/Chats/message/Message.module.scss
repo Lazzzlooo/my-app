@@ -1,16 +1,18 @@
 .message {
-    display: flex;
-}
+  display: flex;
 
-.message p {
+  & p {
     margin: 0;
     padding: 0;
+  }
 }
 
-.avatar img {
+.avatar {
+  & img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
+  }
 }
 
 
