@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './PostForm.module.scss';
-import {addPostActionCreater, updateNewPostTextActionCreator} from "../../../redux/state";
+import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/state";
 
 
 
@@ -14,7 +14,7 @@ const PostForm = (props) => {
     }
 
     let addPost = () => {
-        props.dispatch(addPostActionCreater());
+        props.dispatch(addPostActionCreator());
         newPostElement.current.value = '';
         console.log(newPostElement.current.value);
     }

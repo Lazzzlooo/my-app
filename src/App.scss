@@ -5,7 +5,6 @@
 }
 
 body {
-  box-sizing: border-box;
   background-color: #f5f7fa;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -35,15 +34,20 @@ a {
   width: 720px;
   margin-bottom: 20px;
 
+
   &:first-child {
+
+    box-shadow: 0 2px 6px rgba(47, 83, 151, 0.1);
     width: 280px;
     height: 100%;
   }
 }
 
 .box-profile {
+
   li {
     margin-bottom: 20px;
+
   }
 }
 

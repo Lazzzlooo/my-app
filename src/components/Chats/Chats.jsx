@@ -23,7 +23,7 @@ const Chats = (props) => {
           {messageElements}
         </ul>
         <div className={s.message_form}>
-          <MessageForm />
+          <MessageForm newMessageBody={props.state.newMessageBody} dispatch={props.dispatch}/>
         </div>
       </div>
     </div>
