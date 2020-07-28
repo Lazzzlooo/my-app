@@ -3,13 +3,14 @@ import s from './Chats.module.scss';
 import Chat from "./Chat/Chat";
 import SearchForm from "./SearchForm/SearchForm";
 import Message from "./message/Message";
-import MessageForm from "./MessageForm/MessageForm";
+import MessageFormContainer from "./MessageForm/MessageFormContainer";
 
 const Chats = (props) => {
+  let state = props.store.getState().dialogsPage;
 
-  let dialogElements = props.state.dialogs.map(dialog => <li className={s.item}><Chat id={dialog.id} name={dialog.name}
+  let dialogElements = state.dialogs.map(dialog => <li className={s.item}><Chat id={dialog.id} name={dialog.name}
                                                                                       message={dialog.message}/></li>)
-  let messageElements = props.state.messages.map(message => <li className={s.message_item}><Message
+  let messageElements = state.messages.map(message => <li className={s.message_item}><Message
     message={message.message} id={message.id}/></li>)
 
   return (
@@ -23,7 +24,7 @@ const Chats = (props) => {
           {messageElements}
         </ul>
         <div className={s.message_form}>
-          <MessageForm newMessageBody={props.state.newMessageBody} dispatch={props.dispatch}/>
+          <MessageFormContainer store={props.store}/>
         </div>
       </div>
     </div>

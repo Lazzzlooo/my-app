@@ -2,21 +2,20 @@ import React from 'react';
 import s from './MessageForm.module.scss';
 import IconAdd from "./Icons/IconAdd";
 import IconSend from "./Icons/IconSend";
-import {sendMessageCreator, updateNewMessageBodyCreator} from "../../../redux/dialog-reducer";
 
 
 const MessageForm = (props) => {
 // debugger;
   let newMessageBody = props.newMessageBody;
-  console.log(newMessageBody)
+
   let onSendMessageClick = () => {
-    props.dispatch(sendMessageCreator())
+    props.sendMessage();
   };
 
   let onNewMessageChange = (e) => {
     let body = e.target.value;
-    props.dispatch(updateNewMessageBodyCreator(body));
-  };
+    props.updateNewMessageBody(body);
+  }
 
   return (
     <div className={s.container}>

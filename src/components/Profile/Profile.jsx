@@ -4,16 +4,16 @@ import ProfileCard from "./ProfileCard/ProfileCard";
 import ProfileDescription from "./ProfileDescription/ProfileDescription";
 
 const Profile = (props) => {
-
+  let state = props.store.getState().profilePage.user;
   return (
     <div className={s.profile}>
       <ul className={s.list}>
         <li className={s.item}>
-          <ProfileCard firstName={props.state.firstName} lastName={props.state.lastName} job={props.state.job}/>
+          <ProfileCard firstName={state.firstName} lastName={state.lastName} job={state.job}/>
         </li>
         <li className={s.item}>
-          <ProfileDescription birthday={props.state.birthday} currentCity={props.state.currentCity}
-                              website={props.state.website} isOnline={props.state.isOnline}/>
+          <ProfileDescription birthday={state.birthday} currentCity={state.currentCity}
+                              website={state.website} isOnline={state.isOnline}/>
         </li>
       </ul>
     </div>

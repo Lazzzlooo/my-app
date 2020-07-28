@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './PostForm.module.scss';
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/news-reducer";
 
 
 
@@ -10,13 +9,11 @@ const PostForm = (props) => {
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.dispatch(updateNewPostTextActionCreator(text));
+        props.updateNewPostTextAction(text);
     }
 
     let addPost = () => {
-        props.dispatch(addPostActionCreator());
-        newPostElement.current.value = '';
-        console.log(newPostElement.current.value);
+        props.addPost();
     }
 
     return (

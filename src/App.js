@@ -13,16 +13,13 @@ function App(props) {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header state={props.state.profilePage.user}/>
+        <Header store={props.store}/>
         <ul className="box">
           <li className="box__item"><Sidemenu/></li>
           <li className="box__item">
-            <Route path='/chats' render={() => <Chats state={props.state.dialogsPage}
-                                                      dispatch={props.dispatch}/>}/>
-            <Route path='/profile' render={() => <Profile state={props.state.profilePage.user}/>}/>
-            <Route path='/feed' render={() => <Posts
-              state={props.state.newsPage.post}
-              dispatch={props.dispatch}/>}/>
+            <Route path='/chats' render={() => <Chats store={props.store}/>}/>
+            <Route path='/profile' render={() => <Profile store={props.store}/>}/>
+            <Route path='/feed' render={() => <Posts store={props.store}/>}/>
           </li>
         </ul>
 
