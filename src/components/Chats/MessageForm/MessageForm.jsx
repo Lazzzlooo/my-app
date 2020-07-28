@@ -2,7 +2,7 @@ import React from 'react';
 import s from './MessageForm.module.scss';
 import IconAdd from "./Icons/IconAdd";
 import IconSend from "./Icons/IconSend";
-import {sendMessageCreator, updateNewMessageBodyCreator} from "../../../redux/state";
+import {sendMessageCreator, updateNewMessageBodyCreator} from "../../../redux/dialog-reducer";
 
 
 const MessageForm = (props) => {
