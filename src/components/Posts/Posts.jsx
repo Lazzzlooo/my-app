@@ -10,14 +10,14 @@ const Posts = (props) => {
     <Post id={post.id} postText={post.postText} likes={post.likes}
           comments={post.comments} shared={post.shared}/></li>)
   return (
-    <div>
+    <section>
       <div className={s.form}>
         <PostFormContainer/>
       </div>
       <ul className={s.list}>
         {postElements}
       </ul>
-    </div>
+    </section>
   );
 }
 

@@ -34,6 +34,15 @@ a {
   width: 720px;
   margin-bottom: 20px;
 
+  section {
+    background-color: #fff;
+  }
+
+  #post {
+    section {
+      background-color: transparent;
+    }
+  }
 
   &:first-child {
 
@@ -42,15 +51,6 @@ a {
     height: 100%;
   }
 }
-
-.box-profile {
-
-  li {
-    margin-bottom: 20px;
-
-  }
-}
-
 
 
 

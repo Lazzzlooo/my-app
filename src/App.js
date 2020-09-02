@@ -6,6 +6,7 @@ import Sidemenu from "./components/Sidemenu/Sidemenu";
 import Profile from "./components/Profile/Profile";
 import Chats from "./components/Chats/Chats";
 import Posts from "./components/Posts/Posts";
+import UsersContainer from './components/Users/UsersContainer';
 
 
 function App(props) {
@@ -17,9 +18,10 @@ function App(props) {
         <ul className="box">
           <li className="box__item"><Sidemenu/></li>
           <li className="box__item">
-            <Route path='/chats' render={() => <Chats store={props.store}/>}/>
             <Route path='/profile' render={() => <Profile store={props.store}/>}/>
-            <Route path='/feed' render={() => <Posts store={props.store}/>}/>
+            <Route path='/users' render={() => <UsersContainer />}/>
+            <Route path='/chats' render={() => <Chats store={props.store}/>}/>
+            <div id='post'><Route  path='/feed' render={() => <Posts store={props.store}/>}/></div>
           </li>
         </ul>
 

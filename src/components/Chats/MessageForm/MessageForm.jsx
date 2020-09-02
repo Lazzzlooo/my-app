@@ -4,7 +4,6 @@ import IconAdd from "./Icons/IconAdd";
 import IconSend from "./Icons/IconSend";
 import TextareaAutosize from "react-autosize-textarea";
 
-
 const MessageForm = (props) => {
 // debugger;
   let newMessageBody = props.newMessageBody;

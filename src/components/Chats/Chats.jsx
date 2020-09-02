@@ -14,7 +14,7 @@ const Chats = (props) => {
     message={message.message} id={message.id}/></li>)
 
   return (
-    <div className={s.chats}>
+    <section className={s.chats}>
       <ul className={s.list}>
         <li className={s.item}><SearchForm/></li>
         {dialogElements}
@@ -27,7 +27,7 @@ const Chats = (props) => {
           <MessageFormContainer />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
