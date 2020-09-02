@@ -1,0 +1,21 @@
+@import "src/mixins/mixins";
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  margin-top: 24px;
+
+  background-color: #fff;
+  border-radius: $radius;
+  @include shadow;
+}
+
+.form {
+  background-color: #fff;
+  @include shadow;
+  border-radius: $radius;
+}

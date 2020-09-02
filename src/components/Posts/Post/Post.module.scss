@@ -1,9 +1,126 @@
 @import "src/mixins/mixins";
 
 .post {
-    height: 60px;
-    margin-top: 24px;
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(47, 83, 151, 0.1);
-    border-radius: $radius;
+  min-height: 60px;
+}
+
+.box {
+  display: flex;
+  padding: 10px 20px 0;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.userName {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+}
+
+.postText {
+  margin: 0;
+  padding: 10px 0 0;
+  font-size: 15px;
+  max-width: 1000px;
+}
+
+.icons {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 25px 10px;
+  list-style: none;
+
+  li {
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 26px;
+        height: 26px;
+        top: 0;
+        left: 0;
+
+        margin-left: -5px;
+        margin-top: -5px;
+
+        border-radius: 50%;
+        opacity: 0.6;
+
+      }
+    }
+
+    &:first-child {
+      &:hover {
+        &::before {
+          background-color: lighten(#5eb4c4, 15%);
+        }
+
+        path {
+          z-index: 2;
+          fill: #5eb4c4;
+          stroke: #5eb4c4;
+        }
+
+        .count {
+          color: #5eb4c4;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      &:hover {
+        &::before {
+          background-color: lighten(#47dc95, 15%);
+        }
+
+        path {
+          fill: #47dc95;
+          stroke: #47dc95;
+        }
+
+        .count {
+          color: #47dc95;
+        }
+      }
+    }
+
+    &:last-child {
+      &:hover {
+        &::before {
+          background-color: lighten(#ee2b34, 15%);
+          margin-top: -6px;
+        }
+
+        path {
+          fill: #ee2b34;
+          stroke: #ee2b34;
+        }
+
+        .count {
+          color: #ee2b34;
+        }
+      }
+    }
+  }
+}
+
+.count {
+  margin-left: 5px;
+  display: block;
+  font-size: 16px;
+  line-height: 18px;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import s from './MessageForm.module.scss';
 import IconAdd from "./Icons/IconAdd";
 import IconSend from "./Icons/IconSend";
+import TextareaAutosize from "react-autosize-textarea";
 
 
 const MessageForm = (props) => {
@@ -26,7 +27,7 @@ const MessageForm = (props) => {
           <span className={s.visually_hidden}>Add</span>
         </button>
         <form action="">
-          <textarea value={newMessageBody} onChange={onNewMessageChange} placeholder="Написать сообщение..."/>
+          <TextareaAutosize onResize={() => {}} value={newMessageBody} onChange={onNewMessageChange} placeholder="Написать сообщение..."/>
         </form>
         <button onClick={onSendMessageClick}>
           <IconSend fill="#3d3d3d"/>
