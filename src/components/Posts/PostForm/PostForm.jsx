@@ -2,6 +2,7 @@ import React from 'react';
 import s from './PostForm.module.scss';
 import avatar from '../../../img/Photo.png'
 import TextareaAutosize from "react-autosize-textarea";
+import Button from '../../Button/Button';
 
 
 const PostForm = (props) => {
@@ -25,7 +26,7 @@ const PostForm = (props) => {
                           value={props.newPostText} onChange={onPostChange} ref={newPostElement}
                           placeholder="Что случилось..." maxRows={3}/>
       </form>
-      <button onClick={addPost} className={s.button}>Share</button>
+      <Button onClick={addPost} buttonValue={'Share'}/>
     </section>
   );
 }

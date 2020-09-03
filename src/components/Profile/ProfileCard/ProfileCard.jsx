@@ -5,6 +5,7 @@ import IconFacebook from "../../Icons/IconFacebook";
 import IconTwitter from "../../Icons/IconTwitter";
 import IconLinkedin from "../../Icons/IconLinkedin";
 import IconInstagram from "../../Icons/IconIstagram";
+import Button from '../../Button/Button';
 
 const ProfileCard = (props) => {
   return (
@@ -44,8 +45,8 @@ const ProfileCard = (props) => {
           </li>
         </ul>
         <div className={s.buttons}>
-          <button className={s.button_message}>Message</button>
-          <button className={s.button_more}>More</button>
+          <Button buttonValue={'Message'}/>
+          <Button buttonValue={'More'}/>
         </div>
       </div>
     </div>

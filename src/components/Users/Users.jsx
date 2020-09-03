@@ -1,7 +1,8 @@
 import React from 'react';
 import s from './Users.module.scss';
 import * as axios from 'axios';
-import avatar from '../../img/avatar.png'
+import avatar from '../../img/Photo.png'
+import Button from '../Button/Button';
 
 
 const Users = (props) => {
@@ -13,27 +14,19 @@ const Users = (props) => {
 
   return (
     <section className={s.users}>
-      <ul>
-        {props.users.map(u => <div key={u.id}>
-          <span>
-            <div>
-              <img src={u.photos.small != null ? u.photos.small : avatar} alt="" width={75}/>
-            </div>
-            <div><button onClick={() => {props.toggleFollow(u.id)}}>{u.followed ? 'Unfollow' : 'Follow'}</button></div>
-          </span>
-          <span>
-            <span>
-              <span>{u.name}</span>
-              <span>{u.status}</span>
-              <div>{u.id}</div>
-            </span>
-            <span>
-              {/*<div>{u.location.country}</div><div>{u.location.city}</div>*/}
-            </span>
-          </span>
-        </div>)}
-
-      </ul>
+      {props.users.map(u => <ul key={u.id} className={s.list}>
+          <li className={s.item}>
+            <img src={u.photos.small != null ? u.photos.small : avatar} alt="" width={80}/>
+          </li>
+          <li className={s.item}>
+            <p className={s.name}>{u.name}</p>
+            <p>{u.status != null ? u.status : 'Hi what\'s up'}</p>
+          </li>
+          <li className={s.item}>
+            <Button buttonValue={u.followed ? 'Unfollow' : 'Follow'} onClick={() => {props.toggleFollow(u.id)}}/>
+          </li>
+        </ul>
+      )}
     </section>
   )
 }
