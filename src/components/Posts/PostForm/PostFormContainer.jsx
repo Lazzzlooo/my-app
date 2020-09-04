@@ -1,5 +1,5 @@
 // import React from 'react';
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/news-reducer";
+import {addPost, updateNewPostText} from "../../../redux/news-reducer";
 import PostForm from "./PostForm";
 import {connect} from "react-redux";
 
@@ -9,17 +9,7 @@ let mapStateToProps = (state) => {
 
   }
 }
-let mapDispatchToProps = (dispatch) => {
-  return {
-    updateNewPostTextAction: (text) => {
-      dispatch(updateNewPostTextActionCreator(text));
-    },
-    addPost: () => {
-      dispatch(addPostActionCreator());
-    }
-  }
-}
 
-const PostFormContainer = connect(mapStateToProps, mapDispatchToProps)(PostForm)
+const PostFormContainer = connect(mapStateToProps, {updateNewPostText, addPost})(PostForm)
 
 export default PostFormContainer;

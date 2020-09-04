@@ -5,7 +5,7 @@ import IconFacebook from "../../Icons/IconFacebook";
 import IconTwitter from "../../Icons/IconTwitter";
 import IconLinkedin from "../../Icons/IconLinkedin";
 import IconInstagram from "../../Icons/IconIstagram";
-import Button from '../../Button/Button';
+import Button from '../../common/Button/Button';
 
 const ProfileCard = (props) => {
   return (

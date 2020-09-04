@@ -2,7 +2,7 @@ import React from 'react';
 import s from './PostForm.module.scss';
 import avatar from '../../../img/Photo.png'
 import TextareaAutosize from "react-autosize-textarea";
-import Button from '../../Button/Button';
+import Button from '../../common/Button/Button';
 
 
 const PostForm = (props) => {
@@ -11,7 +11,7 @@ const PostForm = (props) => {
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.updateNewPostTextAction(text);
+    props.updateNewPostText(text);
   }
 
   let addPost = () => {
