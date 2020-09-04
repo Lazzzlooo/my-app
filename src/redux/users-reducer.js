@@ -1,5 +1,7 @@
-const TOGGLE_FOLLOW = 'TOGGLE-FOLLOW';
-const SET_USERS = 'SET-USERS';
+const TOGGLE_FOLLOW = 'TOGGLE_FOLLOW';
+const SET_USERS = 'SET_USERS';
+const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
+const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 
 
 let initialState = {
@@ -7,60 +9,70 @@ let initialState = {
     // {
     //   id: 1,
     //   followed: true,
-    //   firstName: 'Ivan',
-    //   lastName: 'Alekseev',
-    //   location: {country: 'Russia', city: 'Tomsk'},
-    //   status: 'I\'m fine'
+    //   name: 'Ivan',
+    //   status: 'I\'m fine',
+    //   photos: {
+    //     small: null
+    //   }
     // },
     // {
     //   id: 2,
     //   followed: false,
-    //   firstName: 'Alex',
-    //   lastName: 'Alekseev',
-    //   location: {country: 'Russia', city: 'Tomsk'},
-    //   status: 'I\'m fine'
+    //   name: 'Alex',
+    //   status: 'I\'m fine',
+    //   photos: {
+    //     small: null
+    //   }
     // },
     // {
     //   id: 3,
     //   followed: false,
-    //   firstName: 'Sam',
-    //   lastName: 'Alekseev',
-    //   location: {country: 'Russia', city: 'Moscow'},
-    //   status: 'I\'m fine'
+    //   name: 'Sam',
+    //   status: 'I\'m fine',
+    //   photos: {
+    //     small: null
+    //   }
     // },
     // {
     //   id: 4,
     //   followed: true,
-    //   firstName: 'John',
-    //   lastName: 'Alekseev',
-    //   location: {country: 'Russia', city: 'Ufa'},
-    //   status: 'I\'m fine'
+    //   name: 'John',
+    //   status: 'I\'m fine',
+    //   photos: {
+    //     small: null
+    //   }
     // },
     // {
     //   id: 5,
     //   followed: false,
-    //   firstName: 'Ivan',
-    //   lastName: 'Alekseev',
-    //   location: {country: 'Russia', city: 'Kazan'},
-    //   status: 'I\'m fine'
+    //   name: 'Ivan',
+    //   status: 'I\'m fine',
+    //   photos: {
+    //     small: null
+    //   }
     // },
     // {
     //   id: 6,
     //   followed: true,
-    //   firstName: 'Ivan',
-    //   lastName: 'Alekseev',
-    //   location: {country: 'England', city: 'London'},
-    //   status: 'I\'m fine'
+    //   name: 'Ivan',
+    //   status: 'I\'m fine',
+    //   photos: {
+    //     small: null
+    //   }
     // },
     // {
     //   id: 7,
     //   followed: false,
-    //   firstName: 'Ivan',
-    //   lastName: 'Alekseev',
-    //   location: {country: 'Russia', city: 'Tomsk'},
-    //   status: 'I\'m fine'
+    //   name: 'Ivan',
+    //   status: 'I\'m fine',
+    //   photos: {
+    //     small: null
+    //   }
     // }
-  ]
+  ],
+  pageSize: 10,
+  totalUsersCount: 0,
+  currentPage: 1
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -77,7 +89,15 @@ const usersReducer = (state = initialState, action) => {
       }
 
     case SET_USERS:
-      return {...state, users: [...state.users, ...action.users]}
+      return {...state, users: action.users}
+
+    case SET_CURRENT_PAGE:
+      return {...state, currentPage: action.currentPage}
+
+    case SET_TOTAL_USERS_COUNT:
+      return {...state, totalUsersCount: action.totalUsersCount}
+
+
 
 
     default:
@@ -87,5 +107,7 @@ const usersReducer = (state = initialState, action) => {
 
 export const toggleFollowAC = (userId) => ({type: TOGGLE_FOLLOW, userId});
 export const setUsersAC = (users) => ({type: SET_USERS, users});
+export const setCurrentPageAC = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
+export const setTotalUsersCountAC = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, totalUsersCount});
 
 export default usersReducer;
