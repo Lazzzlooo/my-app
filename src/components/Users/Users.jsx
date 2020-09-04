@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Users.module.scss';
 import avatar from '../../img/Photo.png'
-import Button from '../Button/Button';
+import Button from '../common/Button/Button';
 
 const Users = (props) => {
 
@@ -12,12 +12,15 @@ const Users = (props) => {
     pages.push(i);
   }
 
+  const newPages = pages.map(p => <button key={p.id}
+                                     onClick={() => {props.onPageChanged(p)}}
+                                     className={props.currentPage === p ? s.selected : undefined}>{p}</button>)
+  .slice(0, 8)
+
   return (
     <section className={s.users}>
       <div className={s.buttons}>
-        {pages.map(p => <button key={p.id}
-                                onClick={() => {props.onPageChanged(p)}}
-                                className={props.currentPage === p ? s.selected : undefined}>{p}</button>)}
+        {newPages}
       </div>
       {props.users.map(u => <ul key={u.id}
                                 className={s.list}>

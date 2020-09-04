@@ -31,11 +31,13 @@ a {
 
 
 .box__item {
+  position: relative;
   width: 720px;
   margin-bottom: 20px;
 
   section {
     background-color: #fff;
+    border-radius: $radius;
   }
 
   #post {
