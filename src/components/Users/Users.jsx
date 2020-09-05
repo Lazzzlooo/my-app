@@ -3,6 +3,7 @@ import s from './Users.module.scss';
 import avatar from '../../img/Photo.png'
 import Button from '../common/Button/Button';
 import {NavLink} from 'react-router-dom';
+import * as axios from 'axios';
 
 const Users = (props) => {
 
@@ -14,8 +15,8 @@ const Users = (props) => {
   }
 
   const newPages = pages.map(p => <button key={p.id}
-                                     onClick={() => {props.onPageChanged(p)}}
-                                     className={props.currentPage === p ? s.selected : undefined}>{p}</button>)
+                                          onClick={() => {props.onPageChanged(p)}}
+                                          className={props.currentPage === p ? s.selected : undefined}>{p}</button>)
   .slice(0, 8)
 
   return (
@@ -36,8 +37,38 @@ const Users = (props) => {
           </li>
           <li className={s.item}>
             <Button buttonValue={u.followed ? 'Unfollow' : 'Follow'}
-                    onClick={() => {props.toggleFollow(u.id)}}/>
+                    onClick={u.followed
+                      ? () => {
+                        axios
+                        .delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {
+                          withCredentials: true,
+                          headers: {
+                            'API-KEY': 'cbbda7ce-b060-4e6f-8415-bcb9dd96adff'
+                          }
+                        })
+                        .then(resposive => {
+                          if (!resposive.data.resultCode) {
+                            props.toggleFollow(u.id)
+                          }
+                        })
+                      }
+                      : () => {
+                      axios
+                      .post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {
+                        withCredentials: true,
+                        headers: {
+                          'API-KEY': 'cbbda7ce-b060-4e6f-8415-bcb9dd96adff'
+                        }
+                      })
+                      .then(resposive => {
+                        if (!resposive.data.resultCode) {
+                          props.toggleFollow(u.id)
+                        }
+                      })
+                    }}/>
+            {u.id}
           </li>
+
         </ul>
       )}
     </section>

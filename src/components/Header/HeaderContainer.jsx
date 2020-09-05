@@ -12,7 +12,6 @@ class HeaderContainer extends React.Component {
       if (!responsive.data.resultCode) {
         let {id, login, email} = responsive.data.data
         this.props.setUsersData(id, login, email);
-        debugger
       }
 
     })
