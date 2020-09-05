@@ -4,9 +4,6 @@ import s from './Header.module.scss';
 import avatar from '../../img/Photo.png'
 
 const Header = (props) => {
-
-  let state = props.store.getState().profilePage.user;
-
   return (
     <header className={s.header}>
       <ul className={s.list}>
@@ -21,10 +18,12 @@ const Header = (props) => {
           </div>
         </li>
         <li className={s.item}>
-          <NavLink to="#" className={s.user}>
-            {state.firstName} {state.lastName}
-            <img className={s.avatar} src={avatar} alt="" width={40} height={40}/>
-          </NavLink>
+          {props.isAuth
+            ? <NavLink to={`/profile/${props.userId}`} className={s.user}>
+              {props.login}
+              <img className={s.avatar} src={avatar} alt="" width={40} height={40}/>
+            </NavLink>
+            :<NavLink to="/login" className={s.user}>Login</NavLink>}
 
         </li>
       </ul>
