@@ -1,22 +1,22 @@
 import React from 'react';
 import s from './ProfileCard.module.scss';
-import avatar from '../../../img/Photo.png'
 import IconFacebook from "../../Icons/IconFacebook";
 import IconTwitter from "../../Icons/IconTwitter";
 import IconLinkedin from "../../Icons/IconLinkedin";
 import IconInstagram from "../../Icons/IconIstagram";
 import Button from '../../common/Button/Button';
+import avatar from '../../../img/Photo.png'
 
 const ProfileCard = (props) => {
   return (
     <div className={s.profile_card}>
       <div className={s.avatar}>
-        <img src={avatar} width={260} height={260} alt=""/>
+        <img src={props.photo === null ? avatar : props.photo} width={260} height={260} alt=""/>
       </div>
       <div className={s.box}>
         <div className={s.user_descr}>
-          <p className={s.name}>{props.firstName} {props.lastName}</p>
-          <p className={s.working}>{props.job}</p>
+          <p className={s.name}>{props.fullName}</p>
+          <p className={s.working}>{props.lookingForAJobDescription}</p>
         </div>
         <ul className={s.social_list}>
           <li className={s.social_item}>
