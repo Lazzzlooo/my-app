@@ -3,7 +3,6 @@ import s from './Users.module.scss';
 import avatar from '../../img/Photo.png'
 import Button from '../common/Button/Button';
 import {NavLink} from 'react-router-dom';
-import {UserAPI} from '../../api/api';
 
 const Users = (props) => {
 
@@ -36,10 +35,9 @@ const Users = (props) => {
             <p>{u.status != null ? u.status : 'Hi what\'s up'}</p>
           </li>
           <li className={s.item}>
-            <Button buttonValue={u.followed ? 'Unfollow' : 'Follow'}
-                    onClick={() => {
-                      UserAPI.toggleFollow(u.followed, props.toggleFollow(u.id))
-                    }}/>
+            <Button disabled={props.followingInProgress.some(id => id === u.id)}
+                    buttonValue={u.followed ? 'Unfollow' : 'Follow'}
+                    onClick={() => {props.follow(u.id, u.followed)}}/>
           </li>
         </ul>
       )}

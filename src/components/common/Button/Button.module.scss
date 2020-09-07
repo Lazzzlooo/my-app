@@ -29,6 +29,9 @@
   &:focus {
     outline: none;
   }
+  &:disabled {
+    background-color: #333;
+  }
 }
 
 @include key($darkGrey, #ffffff);
