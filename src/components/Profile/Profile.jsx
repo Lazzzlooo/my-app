@@ -6,10 +6,7 @@ import Preloader from '../common/Preloader/Preloader';
 
 const Profile = (props) => {
 
-  if (!props.profile) {
-    return <Preloader />
-  }
-
+  if (!props.profile) return <Preloader />
   return (
     <section className={s.profile}>
       <ul className={s.list}>

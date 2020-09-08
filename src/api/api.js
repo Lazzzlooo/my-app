@@ -9,7 +9,7 @@ const instance = axios.create({
 })
 
 export const UserAPI = {
-  getUsers(currentPage = 1, pageSize = 5) {
+  getUsers(currentPage = 1, pageSize = 4) {
     return instance.get(`users?page=${currentPage}&count=${pageSize}`)
     .then(responsive => responsive.data)
   },

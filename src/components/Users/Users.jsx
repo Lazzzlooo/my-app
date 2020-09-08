@@ -6,7 +6,7 @@ import {NavLink} from 'react-router-dom';
 
 const Users = (props) => {
 
-  let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+  let pagesCount = Math.ceil(props.usersPage.totalUsersCount / props.usersPage.pageSize);
   let pages = [];
 
   for (let i = 1; i <= pagesCount; i++) {
@@ -15,7 +15,7 @@ const Users = (props) => {
 
   const newPages = pages.map(p => <button key={p.id}
                                           onClick={() => {props.onPageChanged(p)}}
-                                          className={props.currentPage === p ? s.selected : undefined}>{p}</button>)
+                                          className={props.usersPage.currentPage === p ? s.selected : undefined}>{p}</button>)
   .slice(0, 8)
 
   return (
@@ -23,7 +23,7 @@ const Users = (props) => {
       <div className={s.buttons}>
         {newPages}
       </div>
-      {props.users.map(u => <ul key={u.id}
+      {props.usersPage.users.map(u => <ul key={u.id}
                                 className={s.list}>
           <li className={s.item}>
             <NavLink to={'/profile/' + u.id}>
@@ -35,9 +35,9 @@ const Users = (props) => {
             <p>{u.status != null ? u.status : 'Hi what\'s up'}</p>
           </li>
           <li className={s.item}>
-            <Button disabled={props.followingInProgress.some(id => id === u.id)}
+            <Button disabled={props.usersPage.followingInProgress.some(id => id === u.id)}
                     buttonValue={u.followed ? 'Unfollow' : 'Follow'}
-                    onClick={() => {props.follow(u.id, u.followed)}}/>
+                    onClick={() => {props.usersPage.follow(u.id, u.followed)}}/>
           </li>
         </ul>
       )}

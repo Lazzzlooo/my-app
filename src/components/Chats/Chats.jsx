@@ -6,13 +6,10 @@ import Message from "./message/Message";
 import MessageFormContainer from "./MessageForm/MessageFormContainer";
 
 const Chats = (props) => {
-  let state = props.store.getState().dialogsPage;
-
-  let dialogElements = state.dialogs.map(dialog => <li className={s.item} key={dialog.id}><Chat id={dialog.id} name={dialog.name}
+  let dialogElements = props.dialogsPage.dialogs.map(dialog => <li className={s.item} key={dialog.id}><Chat id={dialog.id} name={dialog.name}
                                                                                       message={dialog.message}/></li>)
-  let messageElements = state.messages.map(message => <li className={s.message_item} key={message.id}><Message
+  let messageElements = props.dialogsPage.messages.map(message => <li className={s.message_item} key={message.id}><Message
     message={message.message} id={message.id}/></li>)
-
   return (
     <section className={s.chats}>
       <ul className={s.list}>
