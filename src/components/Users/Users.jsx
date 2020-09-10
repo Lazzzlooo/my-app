@@ -37,7 +37,7 @@ const Users = (props) => {
           <li className={s.item}>
             <Button disabled={props.usersPage.followingInProgress.some(id => id === u.id)}
                     buttonValue={u.followed ? 'Unfollow' : 'Follow'}
-                    onClick={() => {props.usersPage.follow(u.id, u.followed)}}/>
+                    onClick={() => {props.follow(u.id, u.followed)}}/>
           </li>
         </ul>
       )}
