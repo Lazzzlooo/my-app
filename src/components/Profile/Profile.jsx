@@ -12,7 +12,7 @@ const Profile = (props) => {
       <ul className={s.list}>
         <li className={s.item}>
           <ProfileCard fullName={props.profile.fullName}
-                       lookingForAJobDescription={props.profile.lookingForAJobDescription}
+                       status={props.status} updateStatus={props.updateStatus}
                        photo={props.profile.photos.large}
           />
         </li>

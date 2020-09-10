@@ -4,6 +4,7 @@ import IconFacebook from "../../Icons/IconFacebook";
 import IconTwitter from "../../Icons/IconTwitter";
 import IconLinkedin from "../../Icons/IconLinkedin";
 import IconInstagram from "../../Icons/IconIstagram";
+import ProfileStatus from "./ProfileStatus";
 import Button from '../../common/Button/Button';
 import avatar from '../../../img/Photo.png'
 
@@ -16,7 +17,8 @@ const ProfileCard = (props) => {
       <div className={s.box}>
         <div className={s.user_descr}>
           <p className={s.name}>{props.fullName}</p>
-          <p className={s.working}>{props.lookingForAJobDescription}</p>
+          <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+
         </div>
         <ul className={s.social_list}>
           <li className={s.social_item}>
