@@ -1,40 +1,32 @@
 import React from 'react';
 import s from './MessageForm.module.scss';
-import IconAdd from "./Icons/IconAdd";
-import IconSend from "./Icons/IconSend";
-import TextareaAutosize from "react-autosize-textarea";
+import IconAdd from './Icons/IconAdd';
+import IconSend from './Icons/IconSend';
+import {Field, reduxForm, reset} from 'redux-form';
 
 const MessageForm = (props) => {
-// debugger;
-  let newMessageBody = props.newMessageBody;
-
-  let onSendMessageClick = () => {
-    props.sendMessage();
-  };
-
-  let onNewMessageChange = (e) => {
-    let body = e.target.value;
-    props.updateNewMessageBody(body);
-  }
-
   return (
-    <div className={s.container}>
-
-      <div className={s.form}>
-        <button id="add">
-          <IconAdd fill="#3d3d3d"/>
-          <span className={s.visually_hidden}>Add</span>
-        </button>
-        <form action="">
-          <TextareaAutosize onResize={() => {}} value={newMessageBody} onChange={onNewMessageChange} placeholder="Написать сообщение..."/>
-        </form>
-        <button onClick={onSendMessageClick}>
-          <IconSend fill="#3d3d3d"/>
-          <span className={s.visually_hidden}>Send Message</span>
-        </button>
-      </div>
-    </div>
+    <form className={s.form} onSubmit={props.handleSubmit}>
+      <button id="add">
+        <IconAdd fill="#3d3d3d"/>
+        <span className={s.visually_hidden}>Add</span>
+      </button>
+      <Field component={'textarea'} type={'text'} name='newMessageBody'
+             placeholder="Написать сообщение..."/>
+      <button>
+        <IconSend fill="#3d3d3d"/>
+        <span className={s.visually_hidden}>Send Message</span>
+      </button>
+    </form>
   )
 }
 
-export default MessageForm;
+const afterSubmit = (result, dispatch) => dispatch(reset('message'));
+
+
+const MessageReduxForm = reduxForm({
+  form: 'message',
+  onSubmitSuccess: afterSubmit
+})(MessageForm)
+
+export default MessageReduxForm;

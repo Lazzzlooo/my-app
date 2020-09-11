@@ -1,15 +1,12 @@
 @import "src/mixins/_mixins";
 
-.post_form {
-  display: flex;
-
+.form {
   min-height: 60px;
   padding: 10px 20px 20px;
+  display: flex;
 
-  .form {
-    width: 100%;
-    margin-left: 15px;
-  }
+  width: 100%;
+  margin-left: 15px;
 
   .input {
     min-height: 40px;
@@ -52,12 +49,14 @@
       background-color: lighten($darkGrey, 20%);
     }
   }
+
   button {
     margin-top: auto;
     margin-bottom: 5px;
     margin-left: 20px;
   }
 }
+
 
 .avatar {
   width: 40px;

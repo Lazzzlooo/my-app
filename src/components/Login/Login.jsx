@@ -1,9 +1,17 @@
 import React from 'react';
+import LoginReduxForm from './LoginForm';
+
+
 
 const Login = () => {
+  const onSubmit = (formData) => {
+    console.log(formData)
+  }
+
   return (
     <section>
-      Login page
+      <p>Login page</p>
+      <LoginReduxForm onSubmit={onSubmit}/>
     </section>
   )
 }
